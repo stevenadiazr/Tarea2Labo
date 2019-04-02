@@ -50,7 +50,8 @@ public class Menu {
                     listaProducto.add(p);
                 }
                 factura.add(listaProducto);
-                mostrarLista(factura, listaProducto);
+                menu();
+//                mostrarLista(factura, listaProducto);
 //                System.out.println(factura);
                 //Funcion agregar producto; 
                 break;
@@ -90,8 +91,12 @@ public class Menu {
 
 //    
     
-    public static void mostrarTotal(){
-        
+    public static void mostrarLista(ArrayList<ArrayList> factura, ArrayList<Producto> listaProducto){
+        for (int i = 0; i < listaProducto.size(); i++){
+            System.out.println("Producto " + (i+1) + ": " + listaProducto.get(i).getNombreProducto());
+            System.out.println("Tipo " + (i+1) + ": " + listaProducto.get(i).getTipoProducto());
+            System.out.print("Precio " + listaProducto.get(i).getPrecioProducto() + ", cantidad: " + listaProducto.get(i).getCantidadProducto());
+        }
     }
     
     public static void darRecibo(){
